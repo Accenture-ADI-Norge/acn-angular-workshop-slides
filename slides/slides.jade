@@ -1,29 +1,116 @@
-//include assets/styles/styles.css
+include ../../assets/styles/styles.css
 include mixins
+
++prereqsSlide("Mens vi venter")
 
 section
   h1 Welcome!
-  br
-  h3 #acn/angular/frontend/workshop
-  br
+  h3 #acn/angular/frontend/workshop 
   p Min Bedrift & UKA @ NTNU
   p 11/10/2013
   a(href='http://www.twitter.com/agresvig') @AGresvig
   |  - 
   a(href='http://www.twitter.com/kjaamodt') @Kjaamodt
 
-section
-  :markdown
-    #La oss
-    Teste litt markdown
-
-    ##H2 her
-    * med
-    * en 
-    * liste
++agendaSlide('hva')
 
 section
-  img(src="assets/images/nodejs.gif", alt="logo")
+  section
+    h2 Hva skal vi lage?
+    p.fragment ADS CMS frontend  
+    p.fragment En webapp som kjører i browseren
+    p.fragment Klienten
+    p.fragment En "Single Page Application"
+
+  section
+    h2 Hvordan?
+    p.fragment JavaScript!
+    p.fragment HTML5
+    p.fragment CSS3
+    p.fragment Frameworks & Libraries
+    h3.fragment FOSS FTW
+
+section
+  section
+    h1 Design
+    p.fragment Hva må på plass?
+
+    aside.notes
+      p Få forslag! La oss finne ut dette sammen
+      p Stikkord:
+      ul
+        li Layout
+        li Fargepalett
+        li Applikasjonsflyt
+      b Design på et større nivå?
+
+  section
+    h2 Applikasjonsdesign
+    p.fragment Frontend
+    p.fragment Backend
+    p.fragment Mellomvare
+    p.fragment Database
+
+    aside.notes
+      p Hva lever hvor?
+      ul
+        li Forretningslogikk
+        li Sikkerhet
+        li Statiske ressurser
+        li GUI
+        li Data
+
+  section
+    h3 I dag fokuserer vi på
+    h2 klienten
+
+  section
+    h3 SPA/Tykklient vs. "tradisjonelle" webapps
+    p.fragment Hva er forskjellen?
+    p.fragment Serverside vs Clientside
+    p.fragment JSON
+
+    aside.notes
+      p Vi legger all logikk forbundet med brukergrensesnittet på klienten, altså i browseren
+      p Ren javascript
+      p Serveren sender kun data (JSON)
+
++agendaSlide('ressurser')
+
+section
+  section
+    h1 Lets get 
+      code hacking!
+
+  +prereqsSlide("Siste sjanse")
+
+  section
+    :markdown
+      ##Hent ressurser
+      ###Backend
+        * Start MongoDB daemon: `$ mongod` 
+          - Må kjøre i bakgrunnen
+        * Last ned backend-applikasjonen: [tinyurl.com/adsCmsBackend](http://tinyurl.com/adsCmsBackend) 
+          - Pakk ut og start den med `$ node server.js`
+        * Verifiser at den kjører: [localhost:5000/api/player](http://localhost:5000/api/player) i browser 
+          - skal gi JSON data
+
+  section
+    :markdown
+      ##Hent ressurser
+      ###Frontend
+        * Fork [seed-prosjektet](https://github.com/Accenture-ADI-Norge/acn-angular-workshop-seed) (tinyurl.com/workshopSeed)
+          - Så `$ git clone <ditt nye repo>`
+        * Installer dependencies (i "acn-angular-workshop-seed"-mappen)
+          - `$ npm install`
+          - `$ bower install`
+        * Vri om nøkkern! 
+          - **`$ grunt server`**
+
++agendaSlide('tools')
+
+section
+  img(src="assets/images/nodejs.png", alt="logo")
 
 section
   h2 Hva skal vi gjøre?
@@ -33,7 +120,6 @@ section
         .done(okay)
         .fail(notOkay);
 
-+agendaSlide()
 
 +agendaSlide('Code Sample')
 

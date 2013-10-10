@@ -1,15 +1,25 @@
 //Agenda slide
-mixin agendaSlide(currSlideName)
-  section
+mixin agendaSlide(name)
+  section.agendaList
     h1 Agenda
     
     ul
-      li(class=currSlideName == "Intro" ? "highlight" : "") Git clone
+      li(class=name == "hva" ? "highlight" : "") Hva skal vi lage?
       li Design
-      li Tools
+      li(class=name == "ressurser" ? "highlight" : "") Hente ressurser
+      li(class=name == "tools" ? "highlight" : "") Verktøy, rammeverk og biblioteker
       li Backend
       li AngularJS
       li Testing & TDD
       li Deploy to the cloud
-      li Bootstrap
-      li Item three..
+
+mixin prereqsSlide(title)
+  section
+    h1= title
+    :markdown
+      * Lag konto på [GitHub](www.github.com)
+      * [Sett opp git](https://help.github.com/articles/set-up-git)
+      * Installer [node.js](http://nodejs.org/)
+      * Kjør følgende fra elevert kommandovindu: `npm install -g yo grunt grunt-cli bower generator-angular`
+      * **Installer [MongoDB](http://www.mongodb.org/)**
+      * Har du en text-editor du liker? Sublime Text, WebStorm, Notepad++ er forslag
