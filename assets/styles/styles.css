@@ -1,0 +1,31 @@
+/** Custom styles go here **/
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4 {
+  margin-bottom: .5em;
+}
+
+.reveal li {
+  margin: 1em 0;
+}
+
+.reveal li li {
+  margin: .4em 0;
+}
+
+.agendaList li {
+  list-style-type: none;
+  margin: 0 0 .7em .7em;
+}
+
+.agendaList li.highlight {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-left: 0;
+}
+
+.reveal code {
+  color: #cc0099;
+  margin-left: 10px;
+}
