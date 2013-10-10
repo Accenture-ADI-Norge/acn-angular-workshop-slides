@@ -1,0 +1,8 @@
+//Agenda slide
+mixin agendaSlide(currSlideName)
+  section
+    h1 Agenda
+    ul
+      li(class=currSlideName == "Intro" ? "highlight" : "") Intro
+      li Next item
+      li Item three..

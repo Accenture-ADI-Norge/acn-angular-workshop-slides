@@ -1,14 +1,30 @@
-section
-    h1 Slideshow
-    img(src="assets/logo.gif", alt="logo")
+//include assets/styles/styles.css
+include mixins
 
 section
-    h2 Title
-    pre.fragment
-        code(data-trim, contenteditable).
-            $.when(that(), other())
-                .done(okay)
-                .fail(notOkay);
+  h1 Welcome!
+  img(src="assets/logo.gif", alt="logo")
+
++agendaSlide()
 
 section
-    h2 The End
+  h2 Code sample
+  pre.fragment
+    code(data-trim, contenteditable).
+      $.when(that(), other())
+        .done(okay)
+        .fail(notOkay);
+
++agendaSlide('Code Sample')
+
+section
+  section
+    h2 Vertical slides?
+  section
+      h2 Yes indeed
+      p Hello
+
++agendaSlide('Vertical slides')
+
+section
+    h2 The End!!
