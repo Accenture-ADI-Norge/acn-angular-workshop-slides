@@ -1,4 +1,4 @@
-acc-angular-workshop-slides
+acn-angular-workshop-slides
 ===========================
 
 Slide-deck for Accenture Angular/Frontend Workshop
