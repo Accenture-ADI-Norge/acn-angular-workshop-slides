@@ -27,7 +27,7 @@ module.exports = function(grunt) {
                     title: "Accenture Angular/Frontend Workshop @ UKA NTNU",
                     description: "Description",
                     author: "Author",
-                    theme: "default",
+                    theme: "night",
                     syntax: "zenburn",
                     controls: true,
                     progress: true,
