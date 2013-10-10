@@ -3,17 +3,37 @@ include mixins
 
 section
   h1 Welcome!
-  img(src="assets/logo.gif", alt="logo")
-
-+agendaSlide()
+  br
+  h3 #acn/angular/frontend/workshop
+  br
+  p Min Bedrift & UKA @ NTNU
+  p 11/10/2013
+  a(href='http://www.twitter.com/agresvig') @AGresvig
+  |  - 
+  a(href='http://www.twitter.com/kjaamodt') @Kjaamodt
 
 section
-  h2 Code sample
+  :markdown
+    #La oss
+    Teste litt markdown
+
+    ##H2 her
+    * med
+    * en 
+    * liste
+
+section
+  img(src="assets/images/nodejs.gif", alt="logo")
+
+section
+  h2 Hva skal vi gjøre?
   pre.fragment
     code(data-trim, contenteditable).
       $.when(that(), other())
         .done(okay)
         .fail(notOkay);
+
++agendaSlide()
 
 +agendaSlide('Code Sample')
 
@@ -28,3 +48,6 @@ section
 
 section
     h2 The End!!
+
+
+
