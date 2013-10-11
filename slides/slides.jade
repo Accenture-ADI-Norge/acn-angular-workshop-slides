@@ -239,6 +239,14 @@ section
       * Optimalisering av kode
       * Test-kjøring
 
+  section
+    a(href="http://yeoman.io/"): img(src="assets/images/yeoman-logo.png", alt="Yeoman")
+
+    p Yeoman = Yo + Grunt + Bower
+    p.fragment: code $ npm install yo
+    p.fragment Workflow tool
+    p.fragment: i Scaffolding
+
 +agendaSlide('angular')
 
 section
@@ -253,9 +261,46 @@ section
       * Veldig rikt på funksjonalitet
       * Et komplett rammeverk (kontra Backbone)
 
+  section
+    h2 Angular app
+    p.fragment Ta en titt på "app.js"
+    ul
+      li.fragment
+        code= 'angular.module("<Appnavn>", [<avhengigheter>..])'
+      li.fragment: code $routeProvider
+
+    aside.notes: :markdown
+      * "module" tar seg av instansiering, avhengigheter, og binding av data
+      * Dependency Injection - Bower
+      * $route - mapper URLer mot controllere og HTML partials (templates)
+
+  section
+    h2 Templates & Expressions 
+    p.fragment Ta en titt på "main.html" og "scripts/controllers/main.js"
+
+    ul
+      li.fragment: code angular.module()
+      li.fragment: code $scope
+      li.fragment: code Controller
+
+    aside.notes: :markdown
+      * $scope representerer modellen, gir context for expressions
+      * I "Controller" behandler vi $scope objektet
+
+  section
+    h3 Oppgaver
+    p Lag Mediaplayer-controller
+    code.fragment $ yo angular:controller mediaplayer
+    
+    .fragment 
+      p Lag Mediaplayer-view ("views/mediaplayer.html") med korresponderende route
+    
+    p.fragment Oppdater navigasjonen til nytt view
+
+
 
 +agendaSlide('Code Sample')
-
+ 
 section
     h2 The End!!
 
