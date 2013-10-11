@@ -110,27 +110,151 @@ section
 +agendaSlide('tools')
 
 section
-  img(src="assets/images/nodejs.png", alt="logo")
+  section
+    a(href="http://getbootstrap.com/"): img(src="assets/images/Twitter-Bootstrap-Logo.jpg", alt="logo")
+    
+    blockquote.fragment Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.
+
+    aside.notes: :markdown
+      Bootstrap er et GUI rammeverk  
+      Twitter initiativ
+
+      * Grid-system
+      * MASSE styling-hjelpemidler
+      * Responsive design
+      * Custom GUI componenter
+      * CSS effekter
+      * Og masse javascript-funksjonalitet
+
+  section
+    h2 Vi prøver oss
+    h4 Bootstrap navigation:
+    
+    pre
+      code.
+        <div class="navbar navbar-default navbar-static-top">
+          <div class="navbar-header">    
+                <a class="navbar-brand" href="#">AAFW</a>
+            </div>
+          
+          <div class="collapse navbar-collapse header-collapse">
+            <ul class="nav navbar-nav">
+              <li>
+              <a href="/">Nav Item 1</a>
+              </li>
+              <li>
+              <a href="#">Nav Item 2</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+  section
+    h3 Responsive mobile support!
+    p Inne i 
+      code= '<div class="navbar-header">'
+
+    pre
+      code.
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".header-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+  section
+    a(href="http://bower.io/"): img(src="assets/images/bower-logo.png", alt="Bower")
+
+    blockquote.fragment.
+      Bower is a package manager for the web. It offers a generic, unopinionated solution to the problem of front-end package management
+
+    aside.notes: :markdown
+      * Nok et Twitter initiativ
+      * Fungerer ganske likt som NPM
+      * Hvem som helst kan publisere pakker
+      * Ment for kode som lever på *klienten*
+
+  section
+    h2 Vi prøver
+    
+    p Legg til nytt bootstrap theme vha. bower:
+    code $ bower install bootstrap-theme-white-plum
+
+    .fragment
+      p Så, oppdater bootstrap.css fila som benyttes i index.html:
+      code bower_components/bootstrap-theme-white-plum/dist/css
+    
+    .fragment Refresh browser
+
+    .fragment
+      h3 Boom! 
+      h3 Flat UI
+
+  section
+    a(href="http://nodejs.org"): img(src="assets/images/nodejs.png", alt="NodeJS")
+
+    blockquote.fragment.
+      Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications
+
+    aside.notes: :markdown
+      * Det som er fett med Node er at det er JS på serveren
+      * Ekstremt lettvekt
+      * Raskt å komme i gang med
+      * JS er per def asynkront, så *non blocking* betyr at serveren ikke binder CPU sykler mens den venter på svar fra DB e.l.
+      * NPM følger med NodeJS - finnes et haaav av FOSS der ute
+
+  section
+    p NodeJS er out of scope i dag, men her er et eksempel
+
+    pre: code.
+      // GET - read media player by id
+      exports.readPlayer = function () {
+          return function (req, res) {
+              MediaPlayer.findById(req.params.id, function (error, player) {
+                  if (error)
+                      res.json(error);
+                  else
+                      res.json(player);
+              });
+          };
+      };
+
+    aside.notes: :markdown
+      * HTTP server
+      * Henter opp objekt fra databasen vha. ID i URL
+      * Hadde trengt 10 klasser i Java...
+
+  section
+    a(href="http://gruntjs.com/"): img(src="assets/images/grunt.jpg", alt="Grunt")
+    p "Javascript Task Runner"
+
+    blockquote.fragment.
+      Why? In one word: automation. The less work you have to do when performing repetitive tasks like minification, compilation, unit testing, linting, etc, the easier your job becomes.
+
+    aside.notes: :markdown
+      * Kan ikke gå i dybden på grunt, men grunt vil hjelpe oss i dag
+      * Lokal server
+      * Live-oppdatering av kode i browser
+      * Optimalisering av kode
+      * Test-kjøring
+
++agendaSlide('angular')
 
 section
-  h2 Hva skal vi gjøre?
-  pre.fragment
-    code(data-trim, contenteditable).
-      $.when(that(), other())
-        .done(okay)
-        .fail(notOkay);
+  section
+    a(href="http://angularjs.org/"): img(src="assets/images/angularjs-logo.png", alt="Angular")
+    blockquote.
+      HTML enhanced for web apps!
+
+    aside.notes: :markdown
+      * Google-backed
+      * Utvider HTML språket
+      * Veldig rikt på funksjonalitet
+      * Et komplett rammeverk (kontra Backbone)
 
 
 +agendaSlide('Code Sample')
-
-section
-  section
-    h2 Vertical slides?
-  section
-      h2 Yes indeed
-      p Hello
-
-+agendaSlide('Vertical slides')
 
 section
     h2 The End!!

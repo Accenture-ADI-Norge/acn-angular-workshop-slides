@@ -29,3 +29,16 @@
   color: #cc0099;
   margin-left: 10px;
 }
+
+.reveal pre code {
+  color: inherit;
+  margin-left: inherit;
+}
+
+.reveal section img {
+  border: none;
+}
+
+.reveal div.fragment {
+  margin-top: 1em;
+}
