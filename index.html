@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="Description">
+		<meta name="author" content="Author">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/night.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+            <div class="slides"><style type="text/css">/** Custom styles go here **/
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4 {
+  margin-bottom: .5em;
+}
+
+.reveal li {
+  margin: 1em 0;
+}
+
+.reveal li li {
+  margin: .4em 0;
+}
+
+.agendaList li {
+  list-style-type: none;
+  margin: 0 0 .7em .7em;
+}
+
+.agendaList li.highlight {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-left: 0;
+}
+
+.reveal code {
+  color: #cc0099;
+  margin-left: 10px;
+}
+
+.reveal pre code {
+  color: inherit;
+  margin-left: inherit;
+}
+
+.reveal section img {
+  border: none;
+}
+
+.reveal div.fragment {
+  margin-top: 1em;
+}</style><!--Agenda slide--><section><h1>Mens vi venter</h1><ul>
+<li>Åpne dette slide-decket på din egen maskin: <a href="http://tinyurl.com/ukaSlides">tinyurl.com/ukaSlides</a></li>
+<li>Lag konto på <a href="www.github.com">GitHub</a></li>
+<li><a href="https://help.github.com/articles/set-up-git">Sett opp git</a></li>
+<li>Installer <a href="http://nodejs.org/">node.js</a></li>
+<li>Kjør følgende fra elevert kommandovindu: <code>npm install -g yo grunt grunt-cli bower generator-angular</code></li>
+<li><strong>Installer <a href="http://www.mongodb.org/">MongoDB</a></strong></li>
+<li>Har du en text-editor du liker? Sublime Text, WebStorm, Notepad++ er forslag</li>
+</ul>
+</section><section><h1>Welcome!</h1><h3>#acn/angular/frontend/workshop </h3><p>Min Bedrift & UKA @ NTNU</p><p>11/10/2013</p><a href="http://www.twitter.com/agresvig">@AGresvig</a> - <a href="http://www.twitter.com/kjaamodt">@Kjaamodt</a></section><section class="agendaList"><h1>Agenda</h1><ul><li class="highlight">Hva skal vi lage?</li><li>Design</li><li>Hente ressurser</li><li>Verktøy, rammeverk og biblioteker</li><li>AngularJS </li></ul></section><section><section><h2>Hva skal vi lage?</h2><p class="fragment">ADS CMS frontend  </p><p class="fragment">En webapp som kjører i browseren</p><p class="fragment">Klienten</p><p class="fragment">En "Single Page Application"</p></section><section><h2>Hvordan?</h2><p class="fragment">JavaScript!</p><p class="fragment">HTML5</p><p class="fragment">CSS3</p><p class="fragment">Frameworks & Libraries</p><h3 class="fragment">FOSS FTW</h3></section></section><section><section><h1>Design</h1><p class="fragment">Hva må på plass?</p><aside class="notes"><p>Få forslag! La oss finne ut dette sammen</p><p>Stikkord:</p><ul><li>Layout</li><li>Fargepalett</li><li>Applikasjonsflyt</li></ul><b>Design på et større nivå?</b></aside></section><section><h2>Applikasjonsdesign</h2><p class="fragment">Frontend</p><p class="fragment">Backend</p><p class="fragment">Mellomvare</p><p class="fragment">Database</p><aside class="notes"><p>Hva lever hvor?</p><ul><li>Forretningslogikk</li><li>Sikkerhet</li><li>Statiske ressurser</li><li>GUI</li><li>Data</li></ul></aside></section><section><h3>I dag fokuserer vi på</h3><h2>klienten</h2></section><section><h3>SPA/Tykklient vs. "tradisjonelle" webapps</h3><p class="fragment">Hva er forskjellen?</p><p class="fragment">Serverside vs Clientside</p><p class="fragment">JSON</p><aside class="notes"><p>Vi legger all logikk forbundet med brukergrensesnittet på klienten, altså i browseren</p><p>Ren javascript</p><p>Serveren sender kun data (JSON)</p></aside></section></section><section class="agendaList"><h1>Agenda</h1><ul><li>Hva skal vi lage?</li><li>Design</li><li class="highlight">Hente ressurser</li><li>Verktøy, rammeverk og biblioteker</li><li>AngularJS </li></ul></section><section><section><h1>Lets get <code>hacking!</code></h1></section><section><h1>Siste sjanse</h1><ul>
+<li>Åpne dette slide-decket på din egen maskin: <a href="http://tinyurl.com/ukaSlides">tinyurl.com/ukaSlides</a></li>
+<li>Lag konto på <a href="www.github.com">GitHub</a></li>
+<li><a href="https://help.github.com/articles/set-up-git">Sett opp git</a></li>
+<li>Installer <a href="http://nodejs.org/">node.js</a></li>
+<li>Kjør følgende fra elevert kommandovindu: <code>npm install -g yo grunt grunt-cli bower generator-angular</code></li>
+<li><strong>Installer <a href="http://www.mongodb.org/">MongoDB</a></strong></li>
+<li>Har du en text-editor du liker? Sublime Text, WebStorm, Notepad++ er forslag</li>
+</ul>
+</section><section><h2>Hent ressurser</h2>
+<h3>Backend</h3>
+<ul>
+<li>Start MongoDB daemon: <code>$ mongod</code> <ul>
+<li>Må kjøre i bakgrunnen</li>
+</ul>
+</li>
+<li>Last ned backend-applikasjonen: <a href="http://tinyurl.com/adsCmsBackend">tinyurl.com/adsCmsBackend</a> <ul>
+<li>Pakk ut og start den med <code>$ node server.js</code></li>
+</ul>
+</li>
+<li>Verifiser at den kjører: <a href="http://localhost:5000/api/player">localhost:5000/api/player</a> i browser <ul>
+<li>skal gi JSON data</li>
+</ul>
+</li>
+</ul>
+</section><section><h2>Hent ressurser</h2>
+<h3>Frontend</h3>
+<ul>
+<li>Fork <a href="https://github.com/Accenture-ADI-Norge/acn-angular-workshop-seed">seed-prosjektet</a> (tinyurl.com/workshopSeed)<ul>
+<li>Så <code>$ git clone &lt;ditt nye repo&gt;</code></li>
+</ul>
+</li>
+<li>Installer dependencies (i &quot;acn-angular-workshop-seed&quot;-mappen)<ul>
+<li><code>$ npm install</code></li>
+<li><code>$ bower install</code></li>
+</ul>
+</li>
+<li>Vri om nøkkern! <ul>
+<li><strong><code>$ grunt server</code></strong></li>
+</ul>
+</li>
+</ul>
+</section></section><section class="agendaList"><h1>Agenda</h1><ul><li>Hva skal vi lage?</li><li>Design</li><li>Hente ressurser</li><li class="highlight">Verktøy, rammeverk og biblioteker</li><li>AngularJS </li></ul></section><section><section><a href="http://getbootstrap.com/"><img src="assets/images/Twitter-Bootstrap-Logo.jpg" alt="logo"/></a><blockquote class="fragment">Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</blockquote><aside class="notes"><p>Bootstrap er et GUI rammeverk<br>Twitter initiativ</p>
+<ul>
+<li>Grid-system</li>
+<li>MASSE styling-hjelpemidler</li>
+<li>Responsive design</li>
+<li>Custom GUI componenter</li>
+<li>CSS effekter</li>
+<li>Og masse javascript-funksjonalitet</li>
+</ul>
+</aside></section><section><h2>Vi prøver oss</h2><h4>Bootstrap navigation:</h4><pre><code><div class="navbar navbar-default navbar-static-top">
+  <div class="navbar-header">    
+        <a class="navbar-brand" href="#">AAFW</a>
+  </div>
+  
+  <div class="collapse navbar-collapse header-collapse">
+    <ul class="nav navbar-nav">
+      <li>
+      <a href="/">Nav Item 1</a>
+      </li>
+      <li>
+      <a href="#">Nav Item 2</a>
+      </li>
+    </ul>
+  </div>
+</div>
+</code></pre></section><section><h3>Responsive mobile support!</h3><p>Inne i <code>&lt;div class=&quot;navbar-header&quot;&gt;</code></p><pre><code><button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".header-collapse">
+  <span class="sr-only">Toggle navigation</span>
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>
+</button>
+</code></pre></section><section><a href="http://bower.io/"><img src="assets/images/bower-logo.png" alt="Bower"/></a><blockquote class="fragment">Bower is a package manager for the web. It offers a generic, unopinionated solution to the problem of front-end package management
+</blockquote><aside class="notes"><ul>
+<li>Nok et Twitter initiativ</li>
+<li>Fungerer ganske likt som NPM</li>
+<li>Hvem som helst kan publisere pakker</li>
+<li>Ment for kode som lever på <em>klienten</em></li>
+</ul>
+</aside></section><section><h2>Vi prøver</h2><p>Legg til nytt bootstrap theme vha. bower:</p><code>$ bower install bootstrap-theme-white-plum</code><div class="fragment"><p>Så, oppdater bootstrap.css fila som benyttes i index.html:</p><code>bower_components/bootstrap-theme-white-plum/dist/css</code></div><div class="fragment">Refresh browser</div><div class="fragment"><h3>Boom! </h3><h3>Flat UI</h3></div></section><section><a href="http://nodejs.org"><img src="assets/images/nodejs.png" alt="NodeJS"/></a><blockquote class="fragment">Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications
+</blockquote><aside class="notes"><ul>
+<li>Det som er fett med Node er at det er JS på serveren</li>
+<li>Ekstremt lettvekt</li>
+<li>Raskt å komme i gang med</li>
+<li>JS er per def asynkront, så <em>non blocking</em> betyr at serveren ikke binder CPU sykler mens den venter på svar fra DB e.l.</li>
+<li>NPM følger med NodeJS - finnes et haaav av FOSS der ute</li>
+</ul>
+</aside></section><section><p>NodeJS er out of scope i dag, men her er et eksempel</p><pre><code>// GET - read media player by id
+exports.readPlayer = function () {
+    return function (req, res) {
+        MediaPlayer.findById(req.params.id, function (error, player) {
+            if (error)
+                res.json(error);
+            else
+                res.json(player);
+        });
+    };
+};
+</code></pre><aside class="notes"><ul>
+<li>HTTP server</li>
+<li>Henter opp objekt fra databasen vha. ID i URL</li>
+<li>Hadde trengt 10 klasser i Java...</li>
+</ul>
+</aside></section><section><a href="http://gruntjs.com/"><img src="assets/images/grunt.jpg" alt="Grunt"/></a><p>"Javascript Task Runner"</p><blockquote class="fragment">Why? In one word: automation. The less work you have to do when performing repetitive tasks like minification, compilation, unit testing, linting, etc, the easier your job becomes.
+</blockquote><aside class="notes"><ul>
+<li>Kan ikke gå i dybden på grunt, men grunt vil hjelpe oss i dag</li>
+<li>Lokal server</li>
+<li>Live-oppdatering av kode i browser</li>
+<li>Optimalisering av kode</li>
+<li>Test-kjøring</li>
+</ul>
+</aside></section><section><a href="http://yeoman.io/"><img src="assets/images/yeoman-logo.png" alt="Yeoman"/></a><p>Yeoman = Yo + Grunt + Bower</p><p class="fragment"><code>$ npm install yo</code></p><p class="fragment">Workflow tool</p><p class="fragment"><i>Scaffolding</i></p></section></section><section class="agendaList"><h1>Agenda</h1><ul><li>Hva skal vi lage?</li><li>Design</li><li>Hente ressurser</li><li>Verktøy, rammeverk og biblioteker</li><li class="highlight">AngularJS </li></ul></section><section><section><a href="http://angularjs.org/"><img src="assets/images/angularjs-logo.png" alt="Angular"/></a><blockquote>HTML enhanced for web apps!
+</blockquote><aside class="notes"><ul>
+<li>Google-backed</li>
+<li>Utvider HTML språket</li>
+<li>Veldig rikt på funksjonalitet</li>
+<li>Et komplett rammeverk (kontra Backbone)</li>
+</ul>
+</aside></section><section><h2>Angular app</h2><p class="fragment">Ta en titt på "app.js"</p><ul><li class="fragment"><code>angular.module(&quot;&lt;Appnavn&gt;&quot;, [&lt;avhengigheter&gt;..])</code></li><li class="fragment"><code>$routeProvider</code></li></ul><aside class="notes"><ul>
+<li>&quot;module&quot; tar seg av instansiering, avhengigheter, og binding av data</li>
+<li>Dependency Injection - Bower</li>
+<li>$route - mapper URLer mot controllere og HTML partials (templates)</li>
+</ul>
+</aside></section><section><h2>Templates & Expressions </h2><p class="fragment">Ta en titt på "main.html" og "scripts/controllers/main.js"</p><ul><li class="fragment"><a href="http://docs.angularjs.org/guide/module"><code>angular.module()</code></a></li><li class="fragment"><a href="http://docs.angularjs.org/api/ng.$rootScope.Scope"><code>$scope</code></a></li><li class="fragment"><a href="http://docs.angularjs.org/guide/dev_guide.mvc.understanding_controller">Controller</a></li></ul><aside class="notes"><ul>
+<li>$scope representerer modellen, gir context for expressions</li>
+<li>I &quot;Controller&quot; behandler vi $scope objektet</li>
+</ul>
+</aside></section><section><h3>Oppgaver</h3><p>Lag Mediaplayer-controller</p><code class="fragment">$ yo angular:controller mediaplayer</code><div class="fragment"> <p>Lag Mediaplayer-view ("views/mediaplayer.html") med korresponderende route</p></div><p class="fragment">Oppdater navigasjonen til nytt view</p></section></section><section><section><h2>Angular Services</h2><p><a href="ngResource](http://docs.angularjs.org/api/ngResource.$resource">ngResource</a></p><code>$resource</code><blockquote>A factory which creates a resource object that lets you interact with RESTful server-side data sources.
+</blockquote><div class="fragment"><code>$resource(url[, paramDefaults][, actions]);</code><pre><code class="fragment">var playerResource =
+  $resource('api/player/:id',
+      { id: '@_id' },
+      { update: { method: 'PUT' } }
+  );
+  </code></pre></div><aside class="notes"><ul>
+<li>En modul som abstraherer en del av kompleksiteten forbundet med server-interaksjon</li>
+<li>Beregnet for REST-grensesnitt</li>
+</ul>
+</aside></section><section><h3>Oppgaver</h3><p>Lag Mediaplayer-service</p><code class="fragment">$ yo angular:service mediaplayer</code><div class="fragment"> <p>Implementer CRUD!</p></div></section></section>    </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+
+<script>
+
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme || "night", // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || "default" || 'default', // default/cube/page/concave/zoom/linear/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+            { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+            { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+            { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+            // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+    });
+
+</script>
+</body>
+</html>
+        
