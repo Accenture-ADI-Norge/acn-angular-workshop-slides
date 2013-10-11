@@ -279,9 +279,9 @@ section
     p.fragment Ta en titt på "main.html" og "scripts/controllers/main.js"
 
     ul
-      li.fragment: code angular.module()
-      li.fragment: code $scope
-      li.fragment: code Controller
+      li.fragment: a(href="http://docs.angularjs.org/guide/module"): code angular.module()
+      li.fragment: a(href="http://docs.angularjs.org/api/ng.$rootScope.Scope"): code $scope
+      li.fragment: a(href="http://docs.angularjs.org/guide/dev_guide.mvc.understanding_controller") Controller
 
     aside.notes: :markdown
       * $scope representerer modellen, gir context for expressions
@@ -297,12 +297,36 @@ section
     
     p.fragment Oppdater navigasjonen til nytt view
 
-
-
-+agendaSlide('Code Sample')
- 
 section
-    h2 The End!!
+  section
+    h2 Angular Services
+    p: a(href="ngResource](http://docs.angularjs.org/api/ngResource.$resource") ngResource
+    code $resource
+
+    blockquote.
+      A factory which creates a resource object that lets you interact with RESTful server-side data sources.
+
+    .fragment
+      code $resource(url[, paramDefaults][, actions]);
+      pre: code.fragment.
+        var playerResource =
+          $resource('api/player/:id',
+              { id: '@_id' },
+              { update: { method: 'PUT' } }
+          );
+
+    aside.notes: :markdown
+      * En modul som abstraherer en del av kompleksiteten forbundet med server-interaksjon
+      * Beregnet for REST-grensesnitt
+
+  section
+    h3 Oppgaver
+    p Lag Mediaplayer-service
+    code.fragment $ yo angular:service mediaplayer
+    
+    .fragment 
+      p Implementer CRUD!
+
 
 
 
