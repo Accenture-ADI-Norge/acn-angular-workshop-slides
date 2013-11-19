@@ -1,5 +1,8 @@
 acn-angular-workshop-slides
 ===========================
+Published at http://accenture-adi-norge.github.io/acn-angular-workshop-slides/
+
+----
 
 Slide-deck for Accenture Angular/Frontend Workshop
 =======
